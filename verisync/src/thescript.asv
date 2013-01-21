@@ -51,8 +51,8 @@ plot(uf_idx, repmat(4000,1,length(uf_idx)), 'rd')
 us_idx = us_idx(2:end);
 uf_idx = uf_idx(1:end-1);
 
-length(us_idx)
-length(uf_idx)
+%% Verify Length
+length(us_idx)~=length(uf_idx)
 
 %% Quick Look
 close all
