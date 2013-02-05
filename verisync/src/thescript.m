@@ -3,7 +3,7 @@ close all
 clear all 
 clc
 
-path = 'C:\Users\Jay\Documents\GitHub\ai_matlab\ai_ephys_toolbox\verisync\data\';
+path = 'C:\Users\jayj\Documents\GitHub\ai_ephys_toolbox\verisync\data\';
 file = '20130104_SNCYTEST_SYSTEM2_001.dat';
 %meta = '2012_1220sys02sync1.meta';
 data  =  LoadBinary([path,file], 'nChannels', 3);
