@@ -3,9 +3,10 @@ close all
 clear all 
 clc
 
-path = 'C:\Users\Jay\Documents\GitHub\ai_matlab\ai_ephys_toolbox\verisync\data\';
-file = '20130104_SNCYTEST_SYSTEM2_001.dat';
-%meta = '2012_1220sys02sync1.meta';
+path = 'C:\Users\Jay\Dropbox\matlab\verisync\data\';
+file = '2012_1220sys02sync1.dat';
+meta = '2012_1220sys02sync1.meta';
+%%
 data  =  LoadBinary([path,file], 'nChannels', 3);
 
 %% Data
@@ -51,8 +52,8 @@ plot(uf_idx, repmat(4000,1,length(uf_idx)), 'rd')
 us_idx = us_idx(2:end);
 uf_idx = uf_idx(1:end-1);
 
-%% Verify Length
-length(us_idx)~=length(uf_idx)
+length(us_idx)
+length(uf_idx)
 
 %% Quick Look
 close all
@@ -100,7 +101,7 @@ hold on; plot(us_idx, repmat(4000,1,length(us_idx)), 'gx')
 plot(uf_idx, repmat(4000,1,length(uf_idx)), 'rd')
 plot(d_idx, repmat(500,1,length(d_idx)), 'bo')
 %% Test for Frame Variance of Photodiode
-%%
+
 %% Quick Look
 close all
 x1 = 4.16E5;
